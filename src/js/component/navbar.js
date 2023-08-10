@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Contact } from "../views/contact";
 
 export const Navbar = () => {
 	return (
@@ -9,7 +10,7 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">
-					<button className="btn btn-success">Add New Contact</button>
+					<button className="btn btn-success" onClick={Contact()}>Add New Contact</button>
 				</Link>
 			</div>
 		</nav>
