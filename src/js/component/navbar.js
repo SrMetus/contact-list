@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Contact } from "../views/contact";
+import { Contact } from "./contact";
 
 export const Navbar = () => {
 	return (
@@ -9,8 +9,8 @@ export const Navbar = () => {
 				<span className="navbar-brand mb-0 h1">[ Home ]</span>
 			</Link>
 			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-success" onClick={Contact()}>Add New Contact</button>
+				<Link to="/contact">
+					<button className="btn btn-success" onClick={() => <Contact />}>Add New Contact</button>
 				</Link>
 			</div>
 		</nav>
