@@ -10,7 +10,7 @@ export const Home = () => {
 	useEffect(() => {
 		actions.getPeople("https://playground.4geeks.com/apis/fake/contact/agenda/Metus")
 	}, [])
-
+	console.log("consolelog", store.people)
 	return (
 		<>
 			{
