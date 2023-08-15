@@ -4,7 +4,7 @@ import { faLocationDot, faPhone, faEnvelope, faTrash, faPen } from '@fortawesome
 import { Modal } from "./modal"
 
 
-export const Jumbotron = ({ full_name, address, phone, email, id }) => {
+export const Jumbotron = ({ full_name, address, phone, email, id, onDelete }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const handleOpenModal = () => {
         setModalOpen(true)
@@ -12,6 +12,11 @@ export const Jumbotron = ({ full_name, address, phone, email, id }) => {
     const handleCloseModal = () => {
         setModalOpen(false)
     }
+    const handleDeleteContact = () => {
+        onDelete(id)
+        handleCloseModal()
+    }
+    console.log("jumbotron",id)
     return (
         <>
         <div className="jumbotron jumbotron-custom">
@@ -43,7 +48,7 @@ export const Jumbotron = ({ full_name, address, phone, email, id }) => {
                 </div>
             </div>
         </div>
-        <Modal />
+        <Modal closeModal={handleCloseModal} deleteContact={handleDeleteContact} />
     </>
     );
 };

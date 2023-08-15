@@ -47,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			delPeople: (peopleId) => {
 				const store = getStore();
 				fetch(`https://playground.4geeks.com/apis/fake/contact/${peopleId}`, {
-					method: DELETE
+					method: "DELETE"
 				})
 					.then(data => { return data.json() })
 					.then(resp => {

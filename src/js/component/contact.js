@@ -9,7 +9,7 @@ export const Contact = () => {
         email: "",
         phone: "",
         address: "",
-        agenda_slug: "Metus" //dejarla Vacia? e inicializar solo
+        agenda_slug: "Metus"
     });
 
     const handleChange = (event) => {
